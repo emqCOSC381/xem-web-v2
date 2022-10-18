@@ -1,0 +1,47 @@
+.hero{
+	position: relative;
+	margin-top:  20vh;
+	height: 55vh;
+	width:  100vw;
+	display: inline-flex;
+	justify-content: space-around;
+	padding-left: 10vw;
+	padding-right: 10vw;
+}
+.heroCard{
+	position: relative;
+	height: 20vw;
+	width:  25vw;
+	background: blue;
+}
+.heroCard1 img,.heroCard2 img,.heroCard3 img{
+	height: 20vw;
+	width:  25vw;
+	border: solid 1px red ;	
+}
+.title{
+	font-weight: 700;
+	font-size: 1.9rem;
+	font-family: cursive;
+}
+.subtitle{
+	font-family: "satisfy";
+}
+.titles{
+	position: absolute;
+	top: 2vh;
+	left:  2vw;
+}
+.loweTitle{
+	position: absolute;
+	top: 33vh;
+	font-weight: 800;
+	left:  2vw;
+	font-family: "satisfy";
+	border-bottom: solid 0.5vh crimson;
+
+}
+.loweTitle a{
+	text-decoration: none;
+	color:  #000;
+}

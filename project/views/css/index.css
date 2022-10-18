@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
+*{
+	box-sizing: border-box;
+	margin: 0px;
+	padding: 0px;}
+body{overflow-x: hidden;}
+.navbar{
+	background: none;
+	position: relative;
+	height: 10vh;
+	z-index: 9;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;}
+.searchBar{
+	position: absolute;
+	top: 3vh;
+	left: 63vw;
+	visibility: hidden;
+	transition: visibility 1s ease;}
+.searchBar form input{
+	background: none;
+	border: none;
+	height: 3.7vh;
+	border-bottom:solid 2px crimson 	;
+	width:  15vw;}
+.logo span{font-weight: 1000;color: crimson;font-family: satisfy;}
+.navLinks ul,.navAccesories ul{
+	width:  37vw;
+	display: flex;
+	flex-direction: row;
+	list-style: none;}
+.navLinks ul{margin-left:  -10vw;}
+.navAccesories{position: relative;}
+.navLinks ul a,.navAccesories ul a{
+	font-family: satisfy;
+	text-decoration: none;
+	color: #000;
+	margin-left: 3vw;
+	font-weight: 600;
+	font-size: .8rem;
+	transition:color .7s ease-in;}
+.navLinks ul a:hover{color:#C5D7CA;}
+.navAccesories ul{width: 10vw;}
+.loveList, .cartList{
+	position:  absolute;
+	background: crimson;
+	width:  1vw;
+	height: 1vw;
+	color: #fff;
+	border-radius: 50%;
+	text-align: center;
+	font-size: .6rem;
+	top:  -0.5vh;}
+
+.textDivh1{
+
+}
+
+
+
+	/*Main Index*/
+
+
+.mainIndex{
+	
+	position: relative;
+	top:  0vh;
+	background: #dcdcdd;
+	height: 100vh;
+	width: 100vw;}
+.images img{
+	height: 100vh;
+	width: 100vw;}
+.text{
+	position: absolute;
+	top:  35vh;
+	left : 10vw;
+	color:  #000;}
+#textDivh2{
+	font-family:"satisfy";
+	font-size: 2rem;
+	font-weight: 500;}
+#textDivh1{
+	line-height: 2	;
+	font-weight: 800;
+	font-size: 4.5rem;
+	font-family: cursive;
+}
+.text button{
+	font-family: satisfy;
+	height:  5vh;
+	border:none;
+	background: crimson;
+	width: 15vw;
+	border-radius: 20px;}

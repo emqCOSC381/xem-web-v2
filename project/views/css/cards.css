@@ -1,0 +1,78 @@
+.cardContainer{
+	width: 100vw;
+	height: auto;
+	padding-left: 6vw;
+	padding-right: 10vw;
+	gap:  2vw;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+
+}
+.card{
+	height: 60vh;
+	width:  20vw;
+	position: relative;
+	font-family: satisfy;
+
+}
+
+.card img{
+	height: 50vh;
+	width:  20vw;
+}
+.cartLove img{
+	height: auto;
+	width: auto;
+}
+.quickViewBtn{
+	height:5vh ;
+	width:  7vw;
+	border-radius:3vh;
+	border:  none;
+	background: crimson;
+	position: absolute;
+	left:  6.5vw;
+	top:  43vh;
+	cursor: pointer;
+	font-family: cursive;
+
+}
+.items,.cartLove{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.cartLove{
+	padding-right: .5vw;
+	flex-direction: column;
+	margin-top: -1vh;
+}
+.cartLove:nth-child(2){
+	padding-top: 2vh;
+}
+
+.price{
+	font-weight: 500;
+}
+
+
+.loadmore{
+	height: 10vh;
+	width: 10vw;
+	/*background: blue;*/
+	margin-left: 44vw;
+	/*margin-bottom: 10vh;*/
+	position: relative;
+	top:  0px;
+}
+.loadmore button{
+	height: 7vh;
+	width: 10vw;
+	border: none;
+	border-radius: 4vh;
+	background: crimson;
+	pointer-events: ;
+	font-family: cursive;
+
+}
