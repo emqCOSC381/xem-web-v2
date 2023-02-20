@@ -1,0 +1,14 @@
+	<div class="card">
+		<a href="quickview?id=<%=id %>"><img src=<%=img %>></a>
+		<div class="items">
+			<div class="namePrice">
+				<p class="name"><%=name %></p>
+				<p class="price">$ <%=price %></p>
+			</div>
+			<div class="cartLove">
+				<a href=""><img src="images/icons/heart.svg"></a>
+				<a id="cartimg" href="addtocart?<%=id %>" id="addtocart" class="addtocart"><img src="images/icons/cart.svg"></a>
+				<%-include('pre-loader.ejs') %>
+			</div>
+		</div>
+	</div>

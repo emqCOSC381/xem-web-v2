@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/cart.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<title>Cart</title>
+</head>
+<body>
+	<%- include('partials/navbar.ejs') %>
+
+	<section class="main">
+			<div class="mainSection">
+				<div class="heading">
+					<p> Shopping Cart</p>
+				</div>
+				<div class="line"></div>
+				<div class="cartHeading">
+					<div class="ProductDetails">
+						<p>Product details</p>
+					</div>
+					<div class="rightList">
+						<p>Quantity</p>
+						<p class="rightListPrice">Price</p>
+						<p class="rightListTotal">Total</p>
+					</div>
+					
+					
+				</div>
+				<%- include('partials/cart_item.ejs') %>
+				
+			</div>
+			<%- include('partials/checkout.ejs') %>
+
+	</section>
+</body>
+</html>

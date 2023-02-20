@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Index Page</title>
+  <link rel="stylesheet" type="text/css" href="css/index.css">
+  <link rel="stylesheet" type="text/css" href="css/hero.css">
+  <link rel="stylesheet" type="text/css" href="css/footer.css">
+  <link rel="stylesheet" type="text/css" href="css/overview.css">
+  <link rel="stylesheet" type="text/css" href="css/cards.css">
+
+</head>
+
+<body>
+
+
+  <section class="mainIndex">
+    <%- include('partials/navbar.ejs') %>
+    <div class="container">
+      <div class="subContainer">
+        <div class="images"><img src="images/slide1.jpg"></div>
+        <div id="textDiv" class="text">
+          <h2 id="textDivh2">Mens New-Season</h2>
+          <h1 id="textDivh1">Jackets & Coats</h1>
+          <button>Shop Now</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hero -->
+  <section class="hero">
+
+    <div class="heroCard heroCard1">
+      <img src="images/hero1.jpg">
+
+      <div class="titles">
+        <h2 class="title">Women</h2>
+        <h3 class="subtitle">Summer 2022</h3>
+      </div>
+
+
+      <div class="loweTitle">
+        <a href="">
+          <h2>Shop Now</h2>
+        </a>
+      </div>
+    </div>
+    <div class="heroCard heroCard1">
+      <img src="images/hero2.jpg">
+
+      <div class="titles">
+        <h2 class="title">Men</h2>
+        <h3 class="subtitle">Summer 2022</h3>
+      </div>
+
+
+      <div class="loweTitle">
+        <a href="">
+          <h2>Shop Now</h2>
+        </a>
+      </div>
+    </div>
+    <div class="heroCard heroCard1">
+      <img src="images/hero3.jpg">
+
+      <div class="titles">
+        <h2 class="title">Accesories</h2>
+        <h3 class="subtitle">Summer 2022</h3>
+      </div>
+
+
+      <div class="loweTitle">
+        <a href="">
+          <h2>Shop Now</h2>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <!-- overview -->
+  <div class="overview">
+    <div class="overviewContainer">
+      <div class="overviewTitle">
+        <h1>PRODUCT OVERVIEW</h1>
+      </div>
+      <div class="overviewSub">
+
+        <div class="overviewLinks">
+          <ul>
+            <a href="primary?dpri=all">
+              <li><button class="primary_btn" id="primary_btn1">All Products</button></li>
+            </a>
+            <a href="primary?pri=women">
+              <li><button class="primary_btn" id="primary_btn2">Women</button></li>
+            </a>
+            <a href="primary?dpri=men">
+              <li><button class="primary_btn" id="primary_btn3">Men</button></li>
+            </a>
+            <a href="primary?dpri=shoes">
+              <li><button class="primary_btn" id="primary_btn4">Shoes</button></li>
+            </a>
+            <a href="primary?dpri=watch">
+              <li><button class="primary_btn" id="primary_btn5">Watches</button></li>
+            </a>
+          </ul>
+        </div>
+
+
+        <div class="filterContainer">
+
+          <button> <img src="images/icons/filter.svg"> Filter</button>
+          <form>
+
+          </form>
+          <button><img src="images/icons/search.svg">Search</button>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <!-- cards -->
+<div class="cardContainer">
+  <% result.forEach(item => { %>
+    <%- include('partials/card.ejs',{
+      price:item.price,
+      img:item.image_url,
+      id:item._id,
+      name:item.name,
+      primary:item.primary,
+      }) %>
+   
+  <% }) %>
+</div>
+
+  <div class="loadmore"><a href="#"><button>Load More</button></a></div>
+
+
+  <!-- https://preview.colorlib.com/theme/cozastore/# -->
+
+
+
+
+
+  <!-- footer -->
+
+  <div class="footer">
+    <div class="footerItems">
+      <div class="categories">
+        <div>
+          <h2>Categories</h2>
+        </div>
+        <div class="footerIcons">
+          <ul>
+            <a href="#">
+              <li>Women</li>
+            </a>
+            <a href="#">
+              <li>Men</li>
+            </a>
+            <a href="#">
+              <li>Shoes</li>
+            </a>
+            <a href="#">
+              <li>Watches</li>
+            </a>
+          </ul>
+        </div>
+      </div>
+
+      <div class="categories">
+        <div>
+          <h2>Help</h2>
+        </div>
+        <div class="footerIcons">
+          <ul>
+            <a href="#">
+              <li>Women</li>
+            </a>
+            <a href="#">
+              <li>Men</li>
+            </a>
+            <a href="#">
+              <li>Shoes</li>
+            </a>
+            <a href="#">
+              <li>Watches</li>
+            </a>
+          </ul>
+        </div>
+      </div>
+
+      <div class=" categories getInTouch">
+        <div>
+          <h2>GET IN TOUCH</h2>
+        </div>
+        <div>
+          <p>Any questions? Let us know in store at 8th <br>
+            floor, Kilimani , Nairobi or <br>
+            call us on (+254) 729 060 186</p>
+        </div>
+        <div class="footerSocials">
+          <ul>
+            <a href="#">
+              <li><img src="images/icons/facebook.svg"></li>
+            </a>
+            <a href="#">
+              <li><img src="images/icons/instagram.svg"></li>
+            </a>
+            <a href="#">
+              <li><img src="images/icons/whatsapp.svg"></li>
+            </a>
+          </ul>
+        </div>
+      </div>
+      <div class="newsLetter">
+        <form action="/">
+          <input type="email" name="email" placeholder="email@example.com">
+          <button class="subBtn" type="submit">Subscribe</button>
+        </form>
+
+      </div>
+    </div>
+    <div class="copyright">
+      <p>Copyright ©2022 All rights reserved by Group 1 </p>
+    </div>
+  </div>
+  <script type="text/javascript" src="js/index.js"></script>
+  <script type="text/javascript" src="js/card.js"></script>
+</body>
+
+</html>

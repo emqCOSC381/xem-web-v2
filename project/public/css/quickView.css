@@ -1,0 +1,133 @@
+ 
+
+*{
+	box-sizing: border-box;
+	margin: 0px;
+	padding: 0px;}
+body{
+	overflow-x: hidden;
+	/*background: #dcdcdc;*/
+}
+
+.container{
+	height: auto;
+	width :100vw;
+	padding: 0px 10vw 0px 10vw;
+	display: flex;
+	flex-direction: row;
+}
+.moreImages{
+	height: 80vh;
+	width: 10vw;
+	position: relative;
+	top:  10vh;
+}
+.images{
+	margin-top: 7vh;
+}
+.moreImages img{
+	object-fit: cover 	;
+	width:  8vw;
+	height:  15vh;
+	padding-left: 2vw;
+} 
+
+.mainImage{
+	height: 80vh;
+	width: 40vw;
+	position: relative;
+	top:  10vh;
+	margin-left: 2vw;
+}
+.mainImage img{
+	width:  40vw;
+	height:  80vh;
+}
+
+.details{
+	height: 80vh;
+	width: 40vw;
+	position: relative;
+	top:  10vh;
+	margin-left: 5vw;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	font-family: satisfy;
+
+}
+.name p{
+	font-family: cursive;
+	font-size: 1.3rem;
+	font-weight: 900;
+
+}
+.price p{
+	margin-top: -5vh;
+	font-size: 1.1rem;
+	font-weight: 600;
+}
+.description{
+	margin-top: -5vh;
+}
+.sizeColor{
+	margin-top: -5vh;
+	height: 6vh;
+	
+}
+.sizeColor for div:nth-child(2){
+	margin-top: 2vh;
+}
+.sizeColor form{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+.sizeColor form select{
+	width: 10vw;
+	border: none;
+	background: none;
+	font-family: satisfy;
+
+}
+.numCard{
+	/*background: yellow;*/
+	height:  20vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	margin-top: 2vh;
+	margin-bottom: 2vh;
+}
+.numCard span{
+	background: rgba(0, 0, 0, 0.1);
+	width:  10vw;
+	height:  10vw;
+	padding:0.5vw 1vw;
+	box-shadow: 10px 10px -5px #888888;
+}
+.numCard a{
+	text-decoration: none;
+	color: #000;
+}
+.numCard button{
+	font-family: cursive;
+	height:  5vh;
+	border:none;
+	background: rgba(0, 0, 0, 0.1);
+	width: 10vw;
+	border-radius: 20px;
+	cursor: pointer;
+}
+
+.socials{
+	background: red;
+}
+.socials ul{
+	list-style: none;
+	display: flex;
+	justify-content: space-around;
+	flex-direction: row;
+	margin-top: -5vh;
+}

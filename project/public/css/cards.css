@@ -1,0 +1,101 @@
+.cardContainer{
+	width: 100vw;
+	height: auto;
+	padding-left: 15vw;
+	padding-right: 10vw;
+	gap:  3vw;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	position: relative;
+	
+
+}
+.card{
+	height: 60vh;
+	width:  20vw;
+	position: relative;
+	font-family: satisfy;
+
+}
+
+.loader {
+	display: none;
+	border: 0.5vh solid #f3f3f3;
+	border-radius: 50%;
+	border-top: 0.5vh solid #dc143c;
+	width: 2.5vh;
+	height: 2.5vh;
+	-webkit-animation: spin 2s linear infinite; /* Safari */
+	animation: spin 2s linear infinite;
+  }
+  
+  /* Safari */
+  @-webkit-keyframes spin {
+	0% { -webkit-transform: rotate(0deg); }
+	100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+  }
+  
+.card img{
+	height: 50vh;
+	width:  20vw;
+}
+.cartLove img{
+	height: 2.5vh;
+	width: auto;
+}
+.quickViewBtn{
+	height:5vh ;
+	width:  7vw;
+	border-radius:3vh;
+	border:  none;
+	background: crimson;
+	position: absolute;
+	left:  6.5vw;
+	top:  43vh;
+	cursor: pointer;
+	font-family: cursive;
+
+}
+.items,.cartLove{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.cartLove{
+	padding-right: .5vw;
+	flex-direction: column;
+	margin-top: -1vh;
+}
+.cartLove:nth-child(2){
+	padding-top: 2vh;
+}
+
+.price{
+	font-weight: 500;
+}
+
+
+.loadmore{
+	height: 10vh;
+	width: 10vw;
+	/*background: blue;*/
+	margin-left: 44vw;
+	/*margin-bottom: 10vh;*/
+	position: relative;
+	top:  0px;
+}
+.loadmore button{
+	height: 7vh;
+	width: 10vw;
+	border: none;
+	border-radius: 4vh;
+	background: crimson;
+	font-family: cursive;
+
+}
