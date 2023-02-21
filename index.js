@@ -25,11 +25,12 @@ mongoose.connect(process.env.DATABASE_URL, {
   useUnifiedTopology: true
 }).then((result)=>{
     console.log("database good");
-    app.listen(process.env.PORT||60607,()=>{
-        console.log(`Express server listening ${process.env.PORT}`)
-    })
+
 
 }
 ).catch((err)=>console.log(err))
 
 
+app.listen(process.env.PORT||60607,()=>{
+  console.log(`Express server listening ${process.env.PORT}`)
+})

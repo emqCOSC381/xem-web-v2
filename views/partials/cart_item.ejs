@@ -1,12 +1,13 @@
 <div class="itemCard">
     <div class="imageDetails">
         <div class="cartImage">
-            <a href=""><img src="images/product.jpg"></a>
+            <a href=""><img src="<%=img %>"></a>
         </div>
+        
         <div class="cartDetails">
-            <p class="productName">Fifa 19</p>
-            <a href=""><p class="productCategory">Gaming</p></a>
-            <a href=""><p class="remove">Remove</p></a>
+            <p class="productName">F<%=name %></p>
+            <a href=""><p class="productCategory"><%=cat %></p></a>
+            <a href="removefromcart?<%=id %>" id="<%=id %>"><p class="remove"><%="Remove" %></p></a>
 
         </div>
         
@@ -14,15 +15,17 @@
     <div class="rightDetails">
         <div class="quantity">
             <a href=""><span class="sub">-</span></a>
-            <span class="sub">1</span>
+            <span class="sub"><%=num %></span>
             <a href=""><span class="sub">+</span></a>
         </div>
         <div class="price">
-            <p>10</p>
+            <p><%=price %></p>
         </div>
         <div class="total">
-            <p>109</p>
+            <p class="totalprice"><%=total%></p>
         </div>
+
         
     </div>
 </div>
+

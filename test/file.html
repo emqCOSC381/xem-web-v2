@@ -1,74 +1,73 @@
-i have 2 javascript files
-first file is called file.js and it has the following code 
-const express = require("express")
-const mongoose =require("mongoose")
-const item = require("../models/items")
-const router = express.Router()
-router.get("/save",(req,res)=>{
-    item.insertMany([
-        {name:"name 1",image_url:"./images/hero1.jpg",price:122,primary:"women",tags:["najs", "naxj"]},
-        {name:"name 2",image_url:"./images/hero2.jpg",price:243,primary:"men",tags:["najs", "naxj"]},
-        {name:"name 3",image_url:"./images/hero3.jpg",price:143,primary:"men",tags:["najs", "naxj"]},
-        {name:"name 4",image_url:"./images/slide1.jpg",price:123,primary:"shoes",tags:["najs", "naxj"]},
-        {name:"name 5",image_url:"./images/slide2.jpg",price:52,primary:"watch",tags:["najs", "naxj"]},
-        {name:"name 6",image_url:"./images/slide3.jpg",price:213,primary:"women",tags:["najs", "naxj"]},
-        {name:"name 7",image_url:"./images/hero1.jpg",price:2121,primary:"shoes",tags:["najs", "naxj"]},
-    ]).then((result)=>res.send(result)).catch((err)=>res.send(err))
+// var inp=[3, 23, 5, 2, 2, 5, 7, 2, 6, 8, 8, 2, 3]
+//     const num_array=inp.map(String)
+//     const master = []
+//     const unique = new Set(num_array)
+//     unique.forEach(u=>{
+//         master.push(num_array.filter(e=>e===u))
+//     })
 
-})
-router.get("/clean",(req,res)=>{
 
-    item.deleteMany({},(err)=>{
-        if(err){
-            console.log(err)
-        }else{
-            res.send("done")
+
+
+<script >
+    let countaobj = {}
+    let arr = [3, 23, 5, 2, 2, 5, 7, 2, 6, 8, 8, 2, 3]
+    let countfunc=(keys)=>{
+        countaobj[keys]=++countaobj[keys] || 1
+
+    }
+
+    arr.forEach(countfunc=)
+</script> 
+
+
+
+for (var i = 0; i < cart_result.length; i++) {
+    var cart_item = await item.findById(cart_result[i].id);
+    let dup = info.includes(cart_result[i])
+    try {
+        if(dup==false){
+            info.push(cart_item)
         }
-    })
-})
-
-module.exports = router
-
-
-
-
-second file is called index.js and it has the following code
-const express = require("express");
-const bodyparser = require("body-parser")
-const mongoose = require('mongoose');
-
-
-const dotenv =require("dotenv")
-
-dotenv.config()
-const app = express()
-
-const route = require("./routes/index")
-const test = require("./test/file")
-
-
-app.use(express.static('public'));
-app.use(bodyparser.json())
-app.set("view engine","ejs")
-
-
-app.use(route)
-app.use(test)
-
-mongoose.connect(mongodb://127.0.1:27017/coza", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-}).then((result)=>{
-    console.log("database good");
-    app.listen(60607,()=>{
-        console.log(`Express server listening ${process.env.PORT}`)
-    })
-
+    } catch (err) {console.log("Error:", err);}
 }
-).catch((err)=>console.log(err));
 
 
-but when i navigate to localhost:60607/save i get the error
-"TypeError: item.insertMany is not a function
-    at /home/martin/Desktop/Node.js/xem-web/test/file.js:6:10"
-what could be the problem
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<%console.log(stats_master)%>
+<% var i=0%>
+
+<% infoq.forEach(elem => { %>
+
+<%-
+include('partials/cart_item.ejs',{
+img:elem.image_url,
+name:elem.name,
+price:elem.price,
+total:"total",
+cat:elem.primary,
+id:elem.id,
+num:stats_master[0].count
+})%>
+
+<% }) %>
+
+
+
+
+
+
+	  <!-- <% }) %> -->
