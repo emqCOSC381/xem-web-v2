@@ -5,6 +5,7 @@
 	margin: 0px;
 	padding: 0px;}
 body{overflow-x: hidden;}
+
 .navbar{
 	background: none;
 	position: relative;
@@ -13,7 +14,9 @@ body{overflow-x: hidden;}
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	justify-content: space-around;}
+	gap:20vw;
+	justify-content: space-around;
+}
 .searchBar{
 	position: absolute;
 	top: 3vh;

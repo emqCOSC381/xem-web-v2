@@ -16,8 +16,9 @@
 <body>
 
 
+
   <section class="mainIndex">
-    <%- include('partials/navbar.ejs') %>
+      <%- include('partials/navbar.ejs') %>  
     <div class="container">
       <div class="subContainer">
         <div class="images"><img src="images/slide1.jpg"></div>
@@ -134,12 +135,14 @@
   <!-- cards -->
 <div class="cardContainer">
   <% result.forEach(item => { %>
+    <!-- var css_id = item._id+css -->
     <%- include('partials/card.ejs',{
       price:item.price,
       img:item.image_url,
       id:item._id,
+      // css_id:"css:item._id,
       name:item.name,
-      primary:item.primary,
+      primslsary:item.primary,
       }) %>
    
   <% }) %>

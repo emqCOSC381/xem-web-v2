@@ -8,33 +8,34 @@ router.get("/",(req,res)=>{
     item.find().then((result)=>{
         res.render("index",{result})
     })
-    
 })
-
 router.get("/quickview",(req,res)=>{
     id = req.query.id
     item.findById(id).then((result)=>{
         res.render("quickView",{result})
     }).catch((err)=>consle.log(err))
 })
-
 router.get("/cart",(req,res)=>{
     res.render("cart")
 })
-
+var i =0;
 router.get("/addtocart",(req,res)=>{
-    id = req.query.id
-    console.log(id)
+    item_id = req.query.id
+    product = new cart({
+        id:item_id
+    })
+    product.save().then((result)=>{
+        console.log(result)
+    }).catch((err)=>console.log(err))
+    res.send("fdf")
 
 
 
-    
-    
 })
 
 
-router.get("/useraccount",(req,res)=>{
-    res.render("userAcount")
+router.get("/updatecart",(req,res)=>{
+    res.send("userAcount")
 })
 router.get("/admin",(req,res)=>{
     res.render("admin")

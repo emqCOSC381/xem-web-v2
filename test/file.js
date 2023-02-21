@@ -1,6 +1,6 @@
 const express = require("express")
 const mongoose =require("mongoose")
-const item = require("../models/items")
+const {item} = require("../models/items")
 const router = express.Router()
 router.get("/save",(req,res)=>{
     item.insertMany([

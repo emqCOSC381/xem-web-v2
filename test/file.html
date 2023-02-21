@@ -1,35 +1,74 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-.loader {
-  border: 0.5vh solid #f3f3f3;
-  border-radius: 50%;
-  border-top: 0.5vh solid #dc143c;
-  width: 2.5vh;
-  height: 2.5vh;
-  -webkit-animation: spin 2s linear infinite; /* Safari */
-  animation: spin 2s linear infinite;
+i have 2 javascript files
+first file is called file.js and it has the following code 
+const express = require("express")
+const mongoose =require("mongoose")
+const item = require("../models/items")
+const router = express.Router()
+router.get("/save",(req,res)=>{
+    item.insertMany([
+        {name:"name 1",image_url:"./images/hero1.jpg",price:122,primary:"women",tags:["najs", "naxj"]},
+        {name:"name 2",image_url:"./images/hero2.jpg",price:243,primary:"men",tags:["najs", "naxj"]},
+        {name:"name 3",image_url:"./images/hero3.jpg",price:143,primary:"men",tags:["najs", "naxj"]},
+        {name:"name 4",image_url:"./images/slide1.jpg",price:123,primary:"shoes",tags:["najs", "naxj"]},
+        {name:"name 5",image_url:"./images/slide2.jpg",price:52,primary:"watch",tags:["najs", "naxj"]},
+        {name:"name 6",image_url:"./images/slide3.jpg",price:213,primary:"women",tags:["najs", "naxj"]},
+        {name:"name 7",image_url:"./images/hero1.jpg",price:2121,primary:"shoes",tags:["najs", "naxj"]},
+    ]).then((result)=>res.send(result)).catch((err)=>res.send(err))
+
+})
+router.get("/clean",(req,res)=>{
+
+    item.deleteMany({},(err)=>{
+        if(err){
+            console.log(err)
+        }else{
+            res.send("done")
+        }
+    })
+})
+
+module.exports = router
+
+
+
+
+second file is called index.js and it has the following code
+const express = require("express");
+const bodyparser = require("body-parser")
+const mongoose = require('mongoose');
+
+
+const dotenv =require("dotenv")
+
+dotenv.config()
+const app = express()
+
+const route = require("./routes/index")
+const test = require("./test/file")
+
+
+app.use(express.static('public'));
+app.use(bodyparser.json())
+app.set("view engine","ejs")
+
+
+app.use(route)
+app.use(test)
+
+mongoose.connect(mongodb://127.0.1:27017/coza", {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+}).then((result)=>{
+    console.log("database good");
+    app.listen(60607,()=>{
+        console.log(`Express server listening ${process.env.PORT}`)
+    })
+
 }
+).catch((err)=>console.log(err));
 
-/* Safari */
-@-webkit-keyframes spin {
-  0% { -webkit-transform: rotate(0deg); }
-  100% { -webkit-transform: rotate(360deg); }
-}
 
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-</style>
-</head>
-<body>
-
-<h2>How To Create A Loader</h2>
-
-<div class="loader"></div>
-
-</body>
-</html>
+but when i navigate to localhost:60607/save i get the error
+"TypeError: item.insertMany is not a function
+    at /home/martin/Desktop/Node.js/xem-web/test/file.js:6:10"
+what could be the problem
