@@ -2,6 +2,7 @@ const express = require("express")
 const mongoose = require("mongoose")
 const { item, cart } = require("../models/items")
 const router = express.Router()
+const request = require("request")
 
 
 router.get("/", (req, res) => {
@@ -23,7 +24,31 @@ router.get("/quickview", (req, res) => {
 })
 
 
+function reused(){
+            
+}
 
+
+
+router.get("/removefromcart",(req,res)=>{
+    id = req.query.id
+    res.send(id )
+    cart.deleteOne({ id: id }).then(function(){
+        console.log("Data deleted"); // Success
+
+
+
+
+
+
+
+
+
+    }).catch(function(error){
+        console.log(error); // Failure
+    });
+
+})
 
 
 
@@ -31,7 +56,6 @@ router.get("/quickview", (req, res) => {
 
 
 router.get("/cart", (req, res) => {
-    var info = []
     var infoq = []
     var info_unfiltered = []
     var info_filtered = []
@@ -54,13 +78,6 @@ router.get("/cart", (req, res) => {
             var cart_item = await item.findById(info_filtered[j]);
             infoq.push(cart_item)
         }
-        for(var k=0;k<info_filtered.length;k++){
-            console.log(info_filtered[k])
-        }
-        for(var m=0;m<info_filtered.length;m++){
-            console.log(stats_master[m])
-        }
-        
         res.render("cart", {num,infoq,stats_master})}catch (err){console.log(err)}
         })
     })
@@ -73,13 +90,7 @@ router.get("/cart", (req, res) => {
 
 
 
-
-
-
-
-
-
-
+    
 
 
 var i = 0;
