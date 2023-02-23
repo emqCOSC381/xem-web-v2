@@ -7,6 +7,7 @@ $(".addtocart").click(function (e) {
   e.preventDefault();
   $.get(`${href[0]}?id=${href[1]}`, function (data, status) {
     if (data) {
+      alert(data)
       setTimeout(() => {
         $(`#${href[1]}`).css('display', 'none')
         $(`#${css_id}`).css('display', 'block')

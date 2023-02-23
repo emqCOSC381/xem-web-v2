@@ -31,23 +31,25 @@
 
       </div>
 
-	  <%for(var i=0;i<infoq.length;i++){%>
+	  <%for(var i=0;i<info.length;i++){%>
+      
 
 		<%-
 			include('partials/cart_item.ejs',{
-			img:infoq[i].image_url,
-			name:infoq[i].name,
-			price:infoq[i].price,
-			total:infoq[i].price*stats_master[i].count,
-			cat:infoq[i].primary,
-			id:infoq[i].id,
-			num:stats_master[i].count
+            id: info[i],
+            img:info[i].result.item.image_url,
+            name: info[i].result.item.name,
+            count:info[i].count,
+            price: info[i].result.item.price,
+            total_amount:info[i].result.item.price*info[i].count,
+            currency: info[i]
+			
 			})%>
 
 	  <%}%>
 
     </div>
-    <%- include('partials/checkout.ejs',{infoq })%>
+    <%- include('partials/checkout.ejs',{total })%>
 
   </section>
 </body>

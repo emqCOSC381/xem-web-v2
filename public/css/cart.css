@@ -10,22 +10,23 @@ body{overflow-x: hidden;}
 .main{
 	width: 100vw;
 	height:  auto;
-	margin-top: 10vh;
+	margin-top: 1vh;
 	padding-left: 10vw;
 	padding-right: 10vw;
 	display: flex;
 	flex-direction: row;
 }
 .mainSection{
-	height:  100vh;/* debug mode*/
+	height:  100vh;
 	width: 55vw;
 	padding-left: 2vw;
+	top: 13vh;
 	box-shadow:0 0 2px 2px rgba(0, 0, 0, 0.1);
 	border-radius: 2vh;
+	position: relative;
 
 }
 .heading{
-	
 	padding-top: 2vw;
 	padding-bottom: 1vh;
 	font-family: cursive;
@@ -37,7 +38,7 @@ body{overflow-x: hidden;}
 	width:49vw;
 	height: .3vh;
 	background: rgba(0, 0, 0, 0.3);
-	position: ;
+
 	margin-right: 2vw;
 }
 .line2{
@@ -140,6 +141,7 @@ body{overflow-x: hidden;}
 .summary{
 	position: fixed;
 	/*border: solid 2px red;*/
+	top: 14vh;
 	height:  70vh;/* debug mode*/
 	width: 20vw;
 	left: 70vw;
