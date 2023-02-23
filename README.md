@@ -24,7 +24,7 @@ the port number is also inthe .env file
 
 To start the server, run the following command:
 npm start 
-Then visit http://localhost:3000 in your web browser to view the website.
+Then visit http://localhost:60606 in your web browser to view the website.
 
 Dependencies
 express
