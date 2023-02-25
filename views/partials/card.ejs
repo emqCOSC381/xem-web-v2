@@ -6,7 +6,7 @@
 				<p class="price">$ <%=price %></p>
 			</div>
 			<div class="cartLove">
-				<% 
+				<%
 					var s =id
 					var css_id ="css"+s
 				%>
@@ -14,8 +14,6 @@
 				<a  href="addtocart?<%=s%>" id="<%=css_id %>" class="addtocart"><img src="images/icons/cart.svg"></a>
 				<span class="<%=id%>" style="display: none;"><%=name %></span>
 				<%-include('pre-loader.ejs',{id:id}) %>
-
-
 			</div>
 		</div>
 	</div>

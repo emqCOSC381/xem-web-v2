@@ -19,18 +19,15 @@ app.set("view engine","ejs")
 
 app.use(route)
 app.use(test)
-
+mongoose.set('strictQuery',true)
 mongoose.connect(process.env.DATABASE_URL, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 }).then((result)=>{
-    console.log("database good");
-
-
+    console.log("Database connected. . .");
 }
 ).catch((err)=>console.log(err))
 
-
 app.listen(process.env.PORT||60607,()=>{
-  console.log(`Express server listening ${process.env.PORT}`)
+  console.log(`Express server listening on port: ${process.env.PORT}`)
 })

@@ -7,7 +7,6 @@ $(".addtocart").click(function (e) {
   e.preventDefault();
   $.get(`${href[0]}?id=${href[1]}`, function (data, status) {
     if (data) {
-      alert(data)
       setTimeout(() => {
         $(`#${href[1]}`).css('display', 'none')
         $(`#${css_id}`).css('display', 'block')
@@ -20,7 +19,10 @@ $(".addtocart").click(function (e) {
 
 });
 const updateCart =()=>{
+  console.log("st:")
+
   $.get("updatecart",function (data, status) {
+    console.log(data)
     document.getElementById("cartnum").innerHTML=data
   })
 }

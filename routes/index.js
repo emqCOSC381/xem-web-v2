@@ -1,6 +1,7 @@
 const express = require("express")
 const { item, cart } = require("../models/items")
 const parent =require("../controllers/cart")
+const { reset } = require("nodemon")
 const router = express.Router()
 
 
@@ -9,6 +10,7 @@ router.get("/", (req, res) => {
         cart.count({}, function (err, count) {
             var num = 0
             var num = count.toString(10)
+            console.log(num)
             res.render("index", { result, num })
 
         })
@@ -22,8 +24,7 @@ router.get("/quickview", (req, res) => {
 })
 
 router.get("/removefromcart",(req,res)=>{
-
-
+    
 })
 
 router.get("/cart", async(req, res) => {
@@ -42,16 +43,6 @@ router.get("/cart", async(req, res) => {
 })
 
 
-
-
-
-
-
-
-
-
-
-
 router.get("/addtocart", (req, res) => {
     id = req.query.id
     res.send(id)
@@ -63,7 +54,12 @@ router.get("/addtocart", (req, res) => {
 })
 
 router.get("/updatecart", (req, res) => {
-
+    cart.count({}, function (err, count) {
+            var num = 0
+            var num = count.toString(10)
+            console.log(num)
+            res.send(num)
+        })
 })
 router.get("/admin", (req, res) => {
     res.render("admin")
