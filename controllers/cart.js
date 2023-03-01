@@ -1,4 +1,4 @@
-
+const fs= require("fs")
 const { item, cart } = require("../models/items")
 const occurences=(arr,value)=>{
     var count = 0;
@@ -7,7 +7,6 @@ const occurences=(arr,value)=>{
     })
     return {id:value,count:count}
 }
-
 const parent=async(filtered_ids,all_ids,info,res)=>{
     var num =await cart.countDocuments()
     for (let i = 0; i < all_ids.length; i++) {

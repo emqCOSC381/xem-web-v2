@@ -3,14 +3,14 @@
         <div class="cartImage">
             <a href=""><img src="<%=img%>"></a>
         </div>
-        
+
         <div class="cartDetails">
             <p class="productName"><%=name%></p>
             <a href=""><p class="productCategory"><%="pr"%></p></a>
-            <a class="removed" href="removefromcart?<%="id" %>" id="<%="id" %>"><p class="remove"><%=Remove  %></p></a>
-
+            <a class="removed" href="removefromcart?id=<%=Object.keys(id) %>" id="<%="id" %>"><p class="remove"><%="Remove"  %></p></a>
+            <% console.log(id.result.item._id) %>
         </div>
-        
+
     </div>
     <div class="rightDetails">
         <div class="quantity">
@@ -25,7 +25,7 @@
             <p class="totalprice"><%=total_amount%></p>
         </div>
 
-        
+
     </div>
 </div>
 

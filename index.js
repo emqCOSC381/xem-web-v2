@@ -1,24 +1,32 @@
 const express = require("express");
 const bodyparser = require("body-parser")
 const mongoose = require('mongoose');
-
-
+const session = require('express-session');
 const dotenv =require("dotenv")
-
 dotenv.config()
 const app = express()
 
-const route = require("./routes/index")
-const test = require("./test/file")
-
-
 app.use(express.static('public'));
 app.use(bodyparser.json())
+app.use(bodyparser.urlencoded({ extended: true }));
 app.set("view engine","ejs")
+app.use(session({
+  secret: 'your_secret_key',
+  resave: false,
+  saveUninitialized: false
+}));
 
-
+// Routes
+const route = require("./routes/index")
+const test = require("./test/file")
+const cart =require("./routes/cart")
+const auth =require("./routes/auth")
 app.use(route)
 app.use(test)
+app.use(cart)
+app.use(auth)
+
+// Initiliaze database
 mongoose.set('strictQuery',true)
 mongoose.connect(process.env.DATABASE_URL, {
   useNewUrlParser: true,
@@ -27,7 +35,6 @@ mongoose.connect(process.env.DATABASE_URL, {
     console.log("Database connected. . .");
 }
 ).catch((err)=>console.log(err))
-
 app.listen(process.env.PORT||60607,()=>{
   console.log(`Express server listening on port: ${process.env.PORT}`)
 })
