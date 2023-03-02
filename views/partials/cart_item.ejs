@@ -7,16 +7,15 @@
         <div class="cartDetails">
             <p class="productName"><%=name%></p>
             <a href=""><p class="productCategory"><%="pr"%></p></a>
-            <a class="removed" href="removefromcart?id=<%=Object.keys(id) %>" id="<%="id" %>"><p class="remove"><%="Remove"  %></p></a>
-            <% console.log(id.result.item._id) %>
+            <a class="removed" href="delete_many?id=<%=id.result.item._id %>" id="<%="id" %>"><p class="remove"><%="Remove"  %></p></a>
         </div>
 
     </div>
     <div class="rightDetails">
         <div class="quantity">
-            <a href=""><span class="sub">-</span></a>
+            <a class="removeOne" href="removefromcart?<%=id.result._id %>"><span class="sub">-</span></a>
             <span class="sub"><%=count %></span>
-            <a href=""><span class="sub">+</span></a>
+            <a class="addtocart" href="addtocart?plus=true&id=<%=id.result.item._id %>" ><span class="sub">+</span></a>
         </div>
         <div class="price">
             <p><%=price %></p>

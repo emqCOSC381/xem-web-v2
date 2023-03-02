@@ -9,7 +9,6 @@ router.get("/login", (req, res) => {
     res.render("auth/login")
 })
 router.post("/loginform", (req, res) => {
-    console.log(req.body)
     validate(req.body.email,req.body.password,req,res)
 
 })
@@ -21,9 +20,8 @@ router.post("/signupform", (req, res) => {
 
 })
 router.get("/useraccount",(req,res)=>{
-    console.log("-----",req.session.loggedIn)
     if (req.session.loggedIn==true) {
-        res.render("userAccount")
+        res.render("userAccount",{num:req.session.cart_count })
 } else {
     res.redirect('/login');
 }

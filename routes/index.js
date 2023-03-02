@@ -8,7 +8,7 @@ router.get("/", (req, res) => {
         cart.count({}, function (err, count) {
             var num = 0
             var num = count.toString(10)
-            console.log(num)
+            req.session.cart_count = num
             res.render("index", { result, num })
 
         })

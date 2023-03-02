@@ -10,10 +10,14 @@ app.use(express.static('public'));
 app.use(bodyparser.json())
 app.use(bodyparser.urlencoded({ extended: true }));
 app.set("view engine","ejs")
+
 app.use(session({
-  secret: 'your_secret_key',
+  secret: process.env.SESSION_KEY,
   resave: false,
-  saveUninitialized: false
+  saveUninitialized: false,
+  cookie: {
+    maxAge: 3600000*(24*30),
+  }
 }));
 
 // Routes

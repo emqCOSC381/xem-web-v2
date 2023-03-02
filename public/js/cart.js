@@ -1,11 +1,9 @@
 
 $("document").ready(() => {
-  $(".removed").click(function (e) {
-
-
+  $(".removeOne").click(function (e) {
     var href = jQuery(this).attr('href').split('?');
-
-
+    var path = href[0]
+    var id = href[1]
     e.preventDefault();
     $.get(`${href[0]}?id=${href[1]}`, function (data, status) {
       if (data) {
@@ -13,15 +11,12 @@ $("document").ready(() => {
         // sendreq()
       }
     });
-
-
-
-
-
   });
   const updateCart = () => {
     $.get("updatecart", function (data, status) {
+   
       document.getElementById("cartnum").innerHTML = data
+      location.reload()
     })
   }
 

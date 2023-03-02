@@ -4,7 +4,6 @@ const user = require("../models/user")
 var userAuthenticated;
 
 const authenticate = (path,email, req, res) => {
-    console.log("auh",userAuthenticated)
 
     if (userAuthenticated) {
         req.session.loggedIn = true;
@@ -50,7 +49,6 @@ const validate = async (useremail, password, req, res) => {
                 if (data == true) { userAuthenticated = true } else { userAuthenticated = false }
                 authenticate("/useraccount",email,req, res)
             }).catch((err) => {
-                // console.log(err)
             })
         }
     }).catch((err) => {
