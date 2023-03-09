@@ -5,7 +5,6 @@ const session = require('express-session');
 const dotenv =require("dotenv")
 dotenv.config()
 const app = express()
-
 app.use(express.static('public'));
 app.use(bodyparser.json())
 app.use(bodyparser.urlencoded({ extended: true }));
