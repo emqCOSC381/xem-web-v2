@@ -19,7 +19,6 @@ app.use(session({
     maxAge: 3600000*(24*30),
   }
 }));
-
 // Routes
 const route = require("./routes/index")
 const test = require("./test/file")
