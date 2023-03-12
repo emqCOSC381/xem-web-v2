@@ -1,5 +1,5 @@
 # xem-web
-E-commerce Website
+This E-commerce Website
 
 This is a sample e-commerce website built with Node.js, Express, and MongoDB. It allows users to browse products, add them to a cart, and checkout with their billing and shipping information.
 
