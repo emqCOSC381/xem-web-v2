@@ -4,7 +4,6 @@ const user = require("../models/user")
 var userAuthenticated;
 
 const authenticate = (path,email, req, res) => {
-
     if (userAuthenticated) {
         req.session.loggedIn = true;
         req.session.username = email;

@@ -20,8 +20,6 @@ const parent=async(filtered_ids,all_ids,info,res)=>{
             })
         }
     }
-
-
     return res.render("cart",{info,total,num})
 }
 module.exports={parent:parent}

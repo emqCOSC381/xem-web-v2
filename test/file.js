@@ -5,7 +5,6 @@ const router = express.Router()
 router.get("/save",(req,res)=>{
     item.insertMany([
         {name:"name 1",image_url:"./images/hero1.jpg",price:122,primary:"women",tags:["najs", "naxj"]},
-        {name:"name 2",image_url:"./images/hero2.jpg",price:243,primary:"men",tags:["najs", "naxj"]},
         {name:"name 3",image_url:"./images/hero3.jpg",price:143,primary:"men",tags:["najs", "naxj"]},
         {name:"name 4",image_url:"./images/slide1.jpg",price:123,primary:"shoes",tags:["najs", "naxj"]},
         {name:"name 5",image_url:"./images/slide2.jpg",price:52,primary:"watch",tags:["najs", "naxj"]},

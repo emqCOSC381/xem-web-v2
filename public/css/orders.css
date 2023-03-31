@@ -1,0 +1,43 @@
+
+    .rightsubTitle{
+        padding-left: 1vw;
+        display: flex;
+        flex-direction:row;
+        gap:3vw;
+    }
+    .itemcard{
+        position: relative;
+        margin-right: 3%;
+        margin-left: 3%;
+        margin-top: 3vh;
+        height: 20vh;
+        width: 94%;
+        border-radius: 2vh;
+        outline: 1px solid red;
+        display: flex;
+        flex-direction: row;
+        gap: 3vw;
+    }
+.image{
+    height: 100%;
+    width: 20%;
+    margin-left: 1vw;
+}
+.image img{
+    border-radius: 2vh;
+    height: 100%;
+    width: 100%;
+    background-color: blue;
+}
+.content{
+    padding-top: 2vh;
+    display: flex;
+    gap: 1v;
+    justify-content: space-around;
+    flex-direction: column;
+}
+.seedetails{
+    position: absolute;
+    left: 90%;
+    top: 3vh;
+}
