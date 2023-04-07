@@ -22,10 +22,9 @@ Here's a [live demo](https://awesome-store-demo.herokuapp.com/) of the website h
 
 ```bash
 git clone https://github.com/yourusername/awesome-store.git
+
 ```
-##Install dependencies:
-
-```bash
-
-cd xem-web
+2. Install dependencies:
+```cd xem-web
 npm install
+```
