@@ -25,6 +25,7 @@ git clone https://github.com/yourusername/awesome-store.git
 
 ```
 2. Install dependencies:
-```cd xem-web
+```
+cd xem-web
 npm install
 ```
