@@ -1,8 +1,8 @@
-# AwesomeStore: An E-commerce Website built with Node.js, Express, and MongoDB
+# Coza: An E-commerce Website built with Node.js, Express, and MongoDB
 
 ## Description
 
-AwesomeStore is a full-stack e-commerce website that allows users to browse and purchase products online. The website is built with Node.js and uses Express as the web framework, MongoDB as the database, and Pug as the templating engine.
+AwesomeStore is a full-stack e-commerce website that allows users to browse and purchase products online. The website is built with Node.js and uses Express as the web framework, MongoDB as the database, and ejs as the templating engine.
 
 ## Features
 
@@ -10,6 +10,8 @@ AwesomeStore is a full-stack e-commerce website that allows users to browse and 
 - View product details including images, description, and price
 - Add products to a cart and adjust the quantity
 - View the cart total and checkout with billing and shipping information
+- Checkout payment through mpesa
+- Get SMS Notificaton after successfull checkout
 - View order history and status
 
 ## Demo
@@ -46,8 +48,17 @@ Express-session
 Express-validator
 MongoDB
 Mongoose
-Pug
+ejs
 dotenv
+    bcrypt": "^5.1.0",
+    body-parser": "^1.20.1",
+    cookie-parser
+    daraja
+    moment
+    morgan 
+    nodemailer
+    nodemon
+    request
 ```
 ## Contributing
 Contributions are welcome! If you find a bug or have a feature request, please open an issue or submit a pull request.
