@@ -39,3 +39,20 @@ DATABASE_URL=mongodb://localhost:27017/coza
 npm start
 ```
 5. Visit http://localhost:60607 in your web browser to view the website.
+
+## Dependencies
+```Express
+Express-session
+Express-validator
+MongoDB
+Mongoose
+Pug
+dotenv
+```
+## Contributing
+Contributions are welcome! If you find a bug or have a feature request, please open an issue or submit a pull request.
+
+## License
+This project is licensed under the MIT License.
+
+kotlin
