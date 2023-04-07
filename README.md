@@ -29,3 +29,12 @@ git clone https://github.com/yourusername/awesome-store.git
 cd xem-web
 npm install
 ```
+3. Set up a MongoDB database and configure the connection URL in the .env file:
+
+```
+DATABASE_URL=mongodb://localhost:27017/awesome-store
+```
+4. Start the server:
+```
+npm start
+```
