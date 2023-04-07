@@ -22,23 +22,10 @@ Here's a [live demo](https://awesome-store-demo.herokuapp.com/) of the website h
 
 ```bash
 git clone https://github.com/yourusername/awesome-store.git
+```
+##Install dependencies:
 
-dependencies:
-     "@daraja/client": "^0.0.8",
-    "axios": "^1.3.5",
-    "bcrypt": "^5.1.0",
-    "body-parser": "^1.20.1",
-    "cookie-parser": "^1.4.6",
-    "daraja": "^1.0.1",
-    "dotenv": "^16.0.3",
-    "ejs": "^3.1.8",
-    "express": "^4.18.2",
-    "express-session": "^1.17.3",
-    "moment": "^2.29.4",
-    "mongoose": "^6.9.1",
-    "morgan": "^1.10.0",
-    "mysql2": "^3.1.2",
-    "nodemailer": "^6.9.1",
-    "nodemon": "^2.0.20",
-    "passport": "^0.6.0",
-    "request": "^2.88.2"
+```bash
+
+cd xem-web
+npm install
