@@ -3,6 +3,10 @@ const { item, cart } = require("../models/items")
 const parent =require("../controllers/cart")
 const { reset } = require("nodemon")
 const router = express.Router()
+
+
+
+
 router.get("/cart", async(req, res) => {
     total =0
     info=[]

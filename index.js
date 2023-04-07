@@ -23,10 +23,12 @@ const route = require("./routes/index")
 const test = require("./test/file")
 const cart = require("./routes/cart")
 const auth = require("./routes/auth")
+const payment= require("./routes/")
 app.use(route)
 app.use(test)
 app.use(cart)
 app.use(auth)
+app.use(payment)
 
 // Initiliaze databa
 mongoose.set('strictQuery', true)
