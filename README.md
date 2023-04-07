@@ -50,15 +50,15 @@ MongoDB
 Mongoose
 ejs
 dotenv
-    bcrypt": "^5.1.0",
-    body-parser": "^1.20.1",
-    cookie-parser
-    daraja
-    moment
-    morgan 
-    nodemailer
-    nodemon
-    request
+bcrypt
+body-parser
+cookie-parser
+daraja
+moment
+morgan 
+nodemailer
+nodemon
+request
 ```
 ## Contributing
 Contributions are welcome! If you find a bug or have a feature request, please open an issue or submit a pull request.
