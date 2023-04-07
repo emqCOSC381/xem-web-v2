@@ -23,7 +23,7 @@ Here's a [live demo](https://awesome-store-demo.herokuapp.com/) of the website h
 ```bash
 git clone https://github.com/yourusername/awesome-store.git
 
-```dependencies:
+dependencies:
      "@daraja/client": "^0.0.8",
     "axios": "^1.3.5",
     "bcrypt": "^5.1.0",
