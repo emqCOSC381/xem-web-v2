@@ -32,9 +32,10 @@ npm install
 3. Set up a MongoDB database and configure the connection URL in the .env file:
 
 ```
-DATABASE_URL=mongodb://localhost:27017/awesome-store
+DATABASE_URL=mongodb://localhost:27017/coza
 ```
 4. Start the server:
 ```
 npm start
 ```
+5. Visit http://localhost:60607 in your web browser to view the website.
